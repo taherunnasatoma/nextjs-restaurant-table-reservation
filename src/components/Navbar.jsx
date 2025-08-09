@@ -45,7 +45,7 @@ export default function Navbar() {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn bg-[#f4ff19] ">Join Now</a>
+                    <a className="btn bg-[#f7ff5d] ">Join Now</a>
                 </div>
             </div>
         </div>
