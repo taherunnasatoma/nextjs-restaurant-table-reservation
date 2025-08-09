@@ -44,8 +44,9 @@ export default function Navbar() {
                      }
                     </ul>
                 </div>
-                <div className="navbar-end">
-                    <a className="btn bg-[#f7ff5d] ">Join Now</a>
+                <div className="navbar-end gap-4">
+                    <Link href="/register" className="btn bg-[#f7ff5d]">Register</Link>
+                    <Link href="/login" className="btn bg-[#f7ff5d]">Login</Link>
                 </div>
             </div>
         </div>
