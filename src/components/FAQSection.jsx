@@ -29,8 +29,8 @@ export default function FAQSection() {
   };
 
   return (
-    <div className=" mx-auto p-6">
-      <h2 className="text-3xl font-bold text-center mb-8">Frequently Asked Questions</h2>
+    <div className=" mx-auto mt-4 p-6">
+      <h2 className="text-3xl text-center font-bold mb-8">Frequently Asked Questions</h2>
 
       <div className="space-y-4">
         {faqs.map(({ question, answer }, index) => (

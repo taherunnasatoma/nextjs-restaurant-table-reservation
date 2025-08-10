@@ -25,7 +25,7 @@ export default function TestimonialPage() {
 
   return (
     <div className="max-w-7xl mx-auto p-6">
-      <h1 className="text-3xl font-bold text-center mb-10">What Our Customers Say</h1>
+      <h1 className="text-3xl text-center font-bold mb-10">What Our Customers Say</h1>
 
       <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {testimonials.map(({ id, name, role, image, text }) => (

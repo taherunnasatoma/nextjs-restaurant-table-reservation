@@ -19,7 +19,7 @@ export default function AboutPage() {
 
         {/* Right side - About info */}
         <div className="md:w-1/2">
-          <h1 className="text-4xl font-bold mb-4">About Our Restaurant</h1>
+          <h1 className="text-3xl font-bold mb-4">About Our Restaurant</h1>
           <p className="text-gray-700 mb-4">
             Welcome to DineReserve, where we connect food lovers with the best dining experiences. Our mission is to simplify your table bookings and make dining joyful.
           </p>

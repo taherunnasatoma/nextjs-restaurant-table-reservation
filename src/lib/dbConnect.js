@@ -6,7 +6,7 @@ export const collectionNameObj = {
   restaurantCollection: "restaurants",
 };
 
-const uri = process.env.MONGODB_URI;
+const uri = process.env.NEXT_PUBLIC_MONGODB_URI;
 
 if (!uri) {
   throw new Error("Please add your Mongo URI to .env.local");

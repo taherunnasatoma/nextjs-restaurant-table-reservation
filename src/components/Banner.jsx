@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Banner() {
   return (
@@ -27,9 +28,10 @@ export default function Banner() {
           </p>
 
           {/* Button */}
-          <button className="bg-black  text-white font-semibold px-6 py-3 rounded-lg shadow-lg transition duration-300">
+        <Link href='#restaurant'>  <button className="bg-black  text-white font-semibold px-6 py-3 rounded-lg shadow-lg transition duration-300">
             Browse Restaurants
           </button>
+          </Link>
         </div>
       </div>
     </div>
