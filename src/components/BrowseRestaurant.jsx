@@ -11,7 +11,7 @@ export default async function BrowseRestaurant() {
   }));
 
   return (
-    <main className="p-6">
+    <main id='restaurant' className="p-6">
       {/* Header / Title */}
       <h1 className="text-3xl text-center font-bold mb-6">Browse Restaurants</h1>
 

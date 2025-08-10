@@ -26,15 +26,16 @@ export default function Navbar() {
   const navMenu = () => (
     <>
       <li><Link href="/">Home</Link></li>
-      <li><Link href="/about">About</Link></li>
-      <li><Link href="/services">Services</Link></li>
-      <li><Link href="/contacts">Contacts</Link></li>
+      <li><Link href="#about">About</Link></li>
+      <li><Link href="#restaurant">Browse Restaurant</Link></li>
+      
     </>
   )
 
   return (
     <div>
-      <div className="navbar bg-base-100 shadow-sm">
+     <div className="navbar bg-base-100 shadow-sm sticky top-0 left-0 w-full z-50">
+
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
