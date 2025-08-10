@@ -8,21 +8,12 @@ function isValidObjectId(id) {
 }
 
 export async function PUT(req, { params }) {
-  try {
+    try {
     const { id } = params;
-    if (!isValidObjectId(id)) {
-      return NextResponse.json({ error: "Invalid ID format" }, { status: 400 });
-    }
-
     const body = await req.json();
     const { name, location, cuisine, tables, openingHours, image } = body;
 
-    if (!name || !location || !tables) {
-      return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
-    }
-
-    const db = await dbConnect();
-    const collection = db.collection("restaurants");
+    const collection = await dbConnect("restaurants");
 
     const updateResult = await collection.updateOne(
       { _id: new ObjectId(id) },
@@ -51,14 +42,11 @@ export async function PUT(req, { params }) {
 }
 
 export async function GET(req, { params }) {
-  try {
+ try {
     const { id } = params;
-    if (!isValidObjectId(id)) {
-      return NextResponse.json({ error: "Invalid ID format" }, { status: 400 });
-    }
 
-    const db = await dbConnect();
-    const collection = db.collection("restaurants");
+    // Connect to "restaurants" collection directly
+    const collection = await dbConnect("restaurants");
 
     const restaurant = await collection.findOne({ _id: new ObjectId(id) });
 
@@ -67,10 +55,32 @@ export async function GET(req, { params }) {
     }
 
     return NextResponse.json(restaurant);
-  } catch (err) {
+  }  catch (err) {
   console.error("GET /api/restaurants/:id error:", err);
   console.error(err.stack);
   return NextResponse.json({ error: "Server error" }, { status: 500 });
 }
 
+}
+
+
+export async function DELETE(req, { params }) {
+  try {
+    const { id } = params;
+    if (!isValidObjectId(id)) {
+      return NextResponse.json({ error: "Invalid ID format" }, { status: 400 });
+    }
+
+    const collection = await dbConnect("restaurants");
+    const deleteResult = await collection.deleteOne({ _id: new ObjectId(id) });
+
+    if (deleteResult.deletedCount === 0) {
+      return NextResponse.json({ error: "Restaurant not found" }, { status: 404 });
+    }
+
+    return NextResponse.json({ success: true });
+  } catch (err) {
+    console.error("DELETE /api/restaurants/:id error:", err);
+    return NextResponse.json({ error: "Server error" }, { status: 500 });
+  }
 }

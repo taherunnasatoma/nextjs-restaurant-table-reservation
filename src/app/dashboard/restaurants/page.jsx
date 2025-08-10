@@ -16,7 +16,7 @@ export default async function RestaurantsPage() {
     <div className="p-6">
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-2xl font-bold">Your Restaurants</h1>
-        <Link href="/dashboard/restaurants/create" className="px-4 py-2 bg-yellow-400 rounded">
+        <Link href="/dashboard/restaurants/create" className="px-4 py-2 bg-[#f7ff5d] rounded">
           Add
         </Link>
       </div>
