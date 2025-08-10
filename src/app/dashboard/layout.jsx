@@ -13,7 +13,7 @@ export default function DashboardLayout({ children }) {
   const menuItems = [
     { label: "Add Restaurant", href: "/dashboard/restaurants/create" },
     { label: "View Restaurants", href: "/dashboard/restaurants" },
-    // add more dashboard links here
+  { label: "My Bookings", href: "/dashboard/bookings" }
   ]
 
   return (
