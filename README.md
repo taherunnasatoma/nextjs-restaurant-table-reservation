@@ -39,3 +39,24 @@ This web app allows customers to seamlessly browse restaurants, check availabili
 ```bash
 git clone https://github.com/taherunnasatoma/nextjs-restaurant-table-reservation.git
 cd nextjs-restaurant-table-reservation
+
+2️⃣ Install dependencies
+using npm:
+npm install
+Or using pnpm:
+pnpm install
+
+3️⃣ Create .env.local file
+env
+NEXT_PUBLIC_MONGODB_URI=your_mongodb_connection_string
+DB_NAME=your_database_name
+
+4️⃣ Run the development server
+npm run dev
+
+Visit http://localhost:3000 in your browser.
+
+5️⃣ Build for production
+npm run build
+npm start
+
